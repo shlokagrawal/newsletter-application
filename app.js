@@ -66,9 +66,9 @@ app.post("/failure", function (req,res) {
 })
 
 // this is for our local machine, when it is hosting app as server
-// app.listen("3000", function() {
-//     console.log("Server is running on port 3000");
-// })
+app.listen("3000", function() {
+    console.log("Server is running on port 3000");
+})
 
 // for heroku
 // app.listen(process.env.PORT, function () {
@@ -76,9 +76,16 @@ app.post("/failure", function (req,res) {
 // })
 
 // if we we want to work both on heroku & locally
-app.listen(process.env.PORT || 3000, function () {
-    console.log("Server is running on port 3000");
-})
+// app.listen(process.env.PORT || 3000, function () {
+//     console.log("Server is running on port 3000");
+// })
+
+// Heroku is asking for payment details for credit card, which we don't have if any one asked do you have experience of deploying app on heroku tell them yes, bbut after there policy change where they ask payment info. i have stopped deploying oh heroku. if you can give me heroku id which is verified i can deploy app.
+// and then refer to lecture 251 from web development course.
+
+// Since Heroku has become paid service we are going to use alternative to deploy this app/
+// refer this video - https://www.youtube.com/watch?v=MusIvEKjqsc&t=75s
+// we are going to use render or railway or cyclic to deploy our application.
 
 // api key of mailchimp - b5bfb83c7869e687d77212e9e353c118-us21
 
