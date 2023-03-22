@@ -87,8 +87,5 @@ app.listen("3000", function() {
 // refer this video - https://www.youtube.com/watch?v=MusIvEKjqsc&t=75s
 // we are going to use render or railway or cyclic to deploy our application.
 
-// api key of mailchimp - b5bfb83c7869e687d77212e9e353c118-us21
-
-// audience id - 2a59a060da
 
 
