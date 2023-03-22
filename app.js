@@ -1,7 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const https = require("https");
-// const { response } = require("express");
+const localConfig = require("./config")
 
 const app = express();
 
@@ -36,11 +36,11 @@ app.post("/", function (req,res) {
     const jsonData = JSON.stringify(data); 
 
     // now we are going to send this data to mailchimp server
-    const url = "https://us21.api.mailchimp.com/3.0/lists/2a59a060da";
+    const url = "https://us21.api.mailchimp.com/3.0/lists/"+localConfig.audienceId;
 
     const options = {
         method : "POST",
-        auth: "shlokagrawal:b5bfb83c7869e687d77212e9e353c118-us21"
+        auth: "shlokagrawal:"+localConfig.apiKey
     }
 
     const request = https.request(url, options, function (response) {
